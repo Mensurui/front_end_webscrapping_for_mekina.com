@@ -34,12 +34,21 @@ export default function Homepage() {
             }
 
             return (
-              <li key={id} className="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+              <li
+                key={id}
+                className="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200 hover:shadow-lg"
+              >
                 {isRecent ? (
                   <div className="p-4">
-                    <h2 className="text-lg font-medium text-gray-900">{name}</h2>
-                    <p className="mt-2 text-sm text-gray-500">Price: {price}</p>
-                    <p className="mt-2 text-sm text-gray-500">Date posted: {posted}</p>
+                    <h2 className="text-lg font-medium text-gray-900 hover:text-blue-600">
+                      {name}
+                    </h2>
+                    <p className="mt-2 text-sm text-gray-500 hover:text-blue-500">
+                      Price: {price}
+                    </p>
+                    <p className="mt-2 text-sm text-gray-500 hover:text-blue-500">
+                      Date posted: {posted}
+                    </p>
                     <a
                       href={more_info}
                       className="mt-2 text-sm font-medium text-blue-600 hover:text-blue-500"
@@ -48,7 +57,9 @@ export default function Homepage() {
                     </a>
                   </div>
                 ) : (
-                  <h1 className="px-4 py-3 text-xl font-bold text-red-500">Nothing new to show</h1>
+                  <h1 className="px-4 py-3 text-xl font-bold text-red-500 hover:text-blue-600">
+                    Nothing new to show
+                  </h1>
                 )}
               </li>
             );
