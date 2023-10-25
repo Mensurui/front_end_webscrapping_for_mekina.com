@@ -22,10 +22,8 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div id="homepage">
-        <Outlet/>
-        </div>
         <ScrollRestoration />
+        <Outlet/>
         <Scripts />
         <LiveReload />
       </body>
